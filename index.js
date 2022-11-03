@@ -1,6 +1,6 @@
 const Discord = require("discord.js")
 
-const TOKEN = "Token"
+const TOKEN = "Twój_Token"
 
 const client = new Discord.Client({
     intents: [
@@ -35,13 +35,7 @@ client.on('message', message => {
 if(command === 'hej'){
     message.reply('Ello!')
 } 
-
-
-//komenda do linku do kanału
-if (command == 'youtube'){
-    message.reply('https://youtube.com/@Kubuse');
-}
-
+    
 
 // komenda pomoc
 if (command === 'pomoc'){
@@ -49,7 +43,7 @@ if (command === 'pomoc'){
     const embed = new Discord.MessageEmbed()
     .setColor('PURPLE')
     .setTitle('Centrum Pomocy')
-    .setDescription('========================== \n \n Lista dostępnych komend: \n \n !hej - Przywitanij się z botem \n \n !siemak - Siemak kopiuje unsub \n \n !youtube - wyświetla kanał Kubuse \n \n !adm - Panel z komendami administracyjnymi \n \n ==========================')
+    .setDescription('========================== \n \n Lista dostępnych komend: \n \n !hej - Przywitanij się z botem \n \n !adm - Panel z komendami administracyjnymi \n \n ==========================')
     .setThumbnail('https://cdn.discordapp.com/attachments/1036247413976989788/1036749100776955924/1667250627673.png')
     .setTimestamp()
     .setFooter(`Guide BOT by ${message.author.tag}`)
@@ -216,23 +210,17 @@ client.on('message', message =>{
         .setImage('https://i.imgflip.com/5dhb6a.gif')
         message.channel.send({ embeds: [embed] })
     }
-
-    if(message.content == 'siemak'){
-        message.channel.send('Siemak kopiuje unsub! Siemak kopiuje unsub! Siemak kopiuje unsub! Siemak kopiuje unsub! Siemak kopiuje unsub! Siemak kopiuje unsub! Siemak kopiuje unsub! Siemak kopiuje unsub! Siemak kopiuje unsub! Siemak kopiuje unsub! Siemak kopiuje unsub! Siemak kopiuje unsub! Siemak kopiuje unsub! Siemak kopiuje unsub! Siemak kopiuje unsub! Siemak kopiuje unsub!')
-    } 
-    
 })
 
-
-//powitanie gracza na serwerze - brak zastosowania
+/*
+//powitanie gracza na serwerze
 client.on("guildMemberAdd", async (member) => {
-    const welcomeChannelId = "1036288151708237834";
+    const welcomeChannelId = "Id_kanału";
     member.guild.channels.cache.get(welcomeChannelId).send({
         content: `<@${member.id}> Witaj na serwerze!`,
-    })
+    }) 
 })
-
-
+*/
 
 
 //login bota
